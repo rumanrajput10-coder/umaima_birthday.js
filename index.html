@@ -1,0 +1,378 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Umaima ♡</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="welcome-screen">
+        <div class="birthday-card">
+            <p class="little-text">A little surprise for someone special...</p>
+
+            <h1>Happy Birthday</h1>
+            <h2>Umaima ♡</h2>
+
+            <p class="birthday-message">
+                Today is all about you!
+                May your day be filled with happiness,
+                love, laughter and beautiful memories.
+            </p>
+
+
+            <button id="continueButton">Let's Begin ♡</button>
+        </div>
+    </main>
+
+<!-- SCREEN 2: BIRTHDAY REVEAL -->
+<section class="reveal-screen" id="screen2">
+
+    <div class="floating-hearts">
+        <span>♡</span>
+        <span>♥</span>
+        <span>✧</span>
+        <span>♡</span>
+        <span>♥</span>
+        <span>✦</span>
+    </div>
+
+    <div class="reveal-content">
+
+        <p class="reveal-small">A LITTLE MAGIC JUST FOR YOU</p>
+
+        <div class="kitten">
+            <div class="kitten-ear left-ear"></div>
+            <div class="kitten-ear right-ear"></div>
+
+            <div class="kitten-face">
+                <div class="bow">🎀</div>
+
+                <div class="eyes">
+                    <span>●</span>
+                    <span>●</span>
+                </div>
+
+                <div class="nose">♥</div>
+
+                <div class="whiskers">♡</div>
+            </div>
+        </div>
+
+        <h1>It's Your Special Day!</h1>
+
+        <h2>HAPPY BIRTHDAY UMAIMA ♡</h2>
+
+        <p class="reveal-message">
+            Today, the world celebrates YOU.
+            Get ready for a little adventure!
+        </p>
+
+        <button class="play-button" id="playGameButton">
+            LET'S PLAY! ♡
+        </button>
+
+    </div>
+</section>
+
+<!-- SCREEN 3: GAME LOBBY -->
+<section class="game-lobby" id="gameLobby">
+
+    <div class="lobby-content">
+
+        <p class="lobby-small">A LITTLE ADVENTURE AWAITS</p>
+
+        <h1>Choose Your Game ♡</h1>
+
+        <p class="lobby-message">
+            Pick a game and let's make some birthday memories!
+        </p>
+
+        <div class="game-container">
+
+            <button class="game-card" id="heartsGame">
+                💗
+                <span>Catch the Hearts</span>
+            </button>
+
+            <button class="game-card" id="memoryGame">
+                🎀
+                <span>Memory Match</span>
+            </button>
+
+            <button class="game-card" id="quizGame">
+                💌
+                <span>Friendship Quiz</span>
+            </button>
+
+            <button class="game-card" id="starsGame">
+                ✨
+                <span>Midnight Wish Maker🌙</span>
+            </button>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- SCREEN 4: CATCH THE HEARTS -->
+<section class="hearts-game" id="heartsGameScreen">
+    <div class="hearts-game-content">
+
+        <p class="lobby-small">A LITTLE BIRTHDAY CHALLENGE</p>
+
+        <h1>Catch the Hearts! ♡</h1>
+
+        <p>Catch as many hearts as you can!</p>
+
+        <div class="game-stats">
+            <div>Score: <span id="heartScore">0</span></div>
+            <div>Time: <span id="heartTimer">30</span>s</div>
+        </div>
+
+        <div class="heart-play-area" id="heartPlayArea">
+            <p id="heartInstructions">
+                Press START when you're ready!
+            </p>
+
+            <button id="movingHeart" class="moving-heart">
+                💗
+            </button>
+        </div>
+
+        <button id="startHeartsGame">START GAME ♡</button>
+
+        <button id="backToLobby">BACK TO GAMES</button>
+
+        <h2 id="heartResult"></h2>
+    </div>
+</section>
+
+<!-- SCREEN 5: MEMORY MATCH -->
+<section class="memory-game" id="memoryGameScreen">
+    <div class="memory-content">
+
+        <p class="lobby-small">A LITTLE BRAIN CHALLENGE</p>
+
+        <h1>Memory Match ♡</h1>
+
+        <p>Find all the matching pairs!</p>
+
+        <div class="memory-stats">
+            <span>Moves: <strong id="memoryMoves">0</strong></span>
+            <span>Pairs: <strong id="memoryPairs">0 / 4</strong></span>
+        </div>
+
+        <div class="memory-board" id="memoryBoard">
+
+            <button class="memory-card" data-symbol="🎀">?</button>
+            <button class="memory-card" data-symbol="🎀">?</button>
+
+            <button class="memory-card" data-symbol="💗">?</button>
+            <button class="memory-card" data-symbol="💗">?</button>
+
+            <button class="memory-card" data-symbol="🌙">?</button>
+            <button class="memory-card" data-symbol="🌙">?</button>
+
+            <button class="memory-card" data-symbol="🧸">?</button>
+            <button class="memory-card" data-symbol="🧸">?</button>
+
+        </div>
+
+        <h2 id="memoryResult"></h2>
+
+        <button id="restartMemory">PLAY AGAIN ♡</button>
+        <button id="memoryBackButton">BACK TO GAMES</button>
+
+    </div>
+</section>
+
+<!-- SCREEN 6: FRIENDSHIP QUIZ -->
+<section class="quiz-game" id="quizGameScreen">
+    <div class="quiz-content">
+
+        <p class="lobby-small">A LITTLE FRIENDSHIP TEST</p>
+
+        <h1>How Well Do You Know Us? 💌</h1>
+
+        <div class="quiz-progress">
+            Question <span id="quizNumber">1</span> of 5
+        </div>
+
+        <h2 id="quizQuestion">Loading question...</h2>
+
+        <div class="quiz-options" id="quizOptions"></div>
+
+        <p id="quizFeedback"></p>
+
+        <h2 id="quizResult"></h2>
+
+        <button id="quizNextButton" style="display:none;">
+            NEXT QUESTION ♡
+        </button>
+
+        <button id="quizBackButton">
+            BACK TO GAMES
+        </button>
+
+    </div>
+</section>
+
+<!-- SCREEN 7: MIDNIGHT WISH MAKER -->
+<section class="wish-game" id="starsGameScreen">
+
+    <div class="wish-content">
+
+        <p class="lobby-small">A LITTLE MAGIC FOR YOU</p>
+
+        <h1>Midnight Wish Maker 🌙</h1>
+
+        <p class="wish-intro">
+            Five little stars, five wishes.
+            Discover the magic hidden inside each one.
+        </p>
+
+        <div class="wish-progress">
+            Wishes discovered: <span id="wishCount">0</span> / 5
+        </div>
+
+        <div class="wish-sky" id="wishSky">
+
+            <button class="wish-star" data-wish="0">✦</button>
+            <button class="wish-star" data-wish="1">✧</button>
+            <button class="wish-star" data-wish="2">✦</button>
+            <button class="wish-star" data-wish="3">✧</button>
+            <button class="wish-star" data-wish="4">✦</button>
+
+        </div>
+
+        <div class="wish-message" id="wishMessage">
+            Choose a glowing star to reveal your wish ♡
+        </div>
+
+        <h2 id="wishFinalMessage"></h2>
+
+        <button id="wishRestartButton">MAKE NEW WISHES ♡</button>
+
+        <button id="starsBackButton">BACK TO GAMES</button>
+
+    </div>
+
+</section>
+
+<!-- SCREEN 8: THE FINAL SURPRISE -->
+<section class="final-surprise" id="finalSurpriseScreen">
+
+    <div class="final-content">
+
+        <p class="lobby-small">A LITTLE SOMETHING FOR YOU ♡</p>
+
+        <h1>One Last Surprise...</h1>
+
+        <p class="final-intro">
+            I saved one more little thing for you.
+            Open it when you're ready. 🎀
+        </p>
+
+        <!-- CUTE ENVELOPE -->
+        <div class="letter-envelope" id="letterEnvelope">
+            <div class="envelope-sticker">♡</div>
+            <div class="envelope-icon">💌</div>
+            <p>FOR UMAIMA</p>
+        </div>
+
+        <button id="openLetterButton" class="open-letter-btn">
+            OPEN YOUR LITTLE LETTER ♡
+        </button>
+
+        <!-- THE LETTER -->
+        <div class="wishes-letter" id="wishesLetter">
+
+            <div class="letter-decoration">୨୧</div>
+
+            <p class="letter-date">A little note, just for you...</p>
+
+            <h2>To my dearest Umaima, 💗</h2>
+
+            <div class="letter-body">
+
+                <p>
+                    Happiest Birthday to youuu! 🎂
+                    I hope this little surprise made you smile.
+                    I wanted to make something special that
+                    reminds you how much you mean to me.
+                </p>
+
+                <p>
+                    Thank you for all the laughs, silly moments,
+                    random conversations and memories.
+                    Life is a little more fun with you in it!
+                </p>
+
+                <p>
+                    I hope this new chapter brings you happiness,
+                    beautiful opportunities, endless blessings
+                    and everything your heart has been wishing for.
+                </p>
+
+                <p>
+                    And please remember, no matter how much
+                    time passes, I hope we never run out of
+                    things to laugh about. ♡
+                </p>
+
+            </div>
+
+            <p class="letter-ending">
+                With lots of love and birthday wishes,
+                <br>
+                Your friend ♡
+            </p>
+
+            <div class="letter-footer">✧･ﾟ: *✧･ﾟ:* 🎀 *:･ﾟ✧*:･ﾟ✧</div>
+
+            <button id="bigByeButton" class="big-bye-btn">
+                ONE LAST THING... 🌙
+            </button>
+
+        </div>
+
+        <!-- FINAL GOODBYE -->
+        <div class="big-bye" id="bigBye">
+
+            <p>♡ A LITTLE MESSAGE BEFORE YOU GO ♡</p>
+
+            <h1>UNTIL OUR NEXT ADVENTURE!</h1>
+
+            <div class="bye-decoration">🎀 ✨ 💗 ✨ 🎀</div>
+
+            <h2>BYEEEE UMAIMA! ♡</h2>
+
+            <p>
+                Keep smiling, keep shining
+                and never stop being you.
+            </p>
+
+            <p>Made with love, just for you. 💌</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+    <audio id="birthdayMusic" loop>
+        <source src="music/birthday_song.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
