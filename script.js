@@ -25,10 +25,16 @@ continueButton.addEventListener("click", async function () {
     screen2.style.display = "flex";
 });
 
-// Screen 2 → Game Lobby
-playGameButton.addEventListener("click", function () {
-    screen2.style.display = "none";
-    gameLobby.style.display = "flex";
+// Screen 1 → Screen 2
+continueButton.addEventListener("click", function () {
+
+    screen1.style.display = "none";
+    screen2.style.display = "flex";
+
+    birthdayMusic.play().catch(function(error) {
+        console.log("Music could not start:", error);
+    });
+
 });
 
 // Game Lobby → Catch the Hearts
