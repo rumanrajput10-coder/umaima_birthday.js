@@ -505,3 +505,8 @@ bigByeButton.addEventListener("click", function() {
     wishesLetter.style.display = "none";
     bigBye.style.display = "block";
 });
+// SCREEN 2 → GAME LOBBY
+playGameButton.addEventListener("click", function() {
+    screen2.style.display = "none";
+    gameLobby.style.display = "flex";
+});
